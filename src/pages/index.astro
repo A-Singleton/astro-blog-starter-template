@@ -1,50 +1,283 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="Arkbridge Systems | Advanced AI/ML & Custom Software Development">
+	
+	<section class="hero">
+		<h1>Next-Generation Predictive Intelligence & Systems Engineering</h1>
+		<p class="subtitle">Delivering mission-critical Custom Software, Data Analytics, and Logistical Machine Learning models to U.S. Federal Agencies.</p>
+		<div class="badge-row">
+			<span class="badge">U.S. Small Business</span>
+			<span class="badge">NAICS 541511 Primary</span>
+			<span class="badge">Pre-Award Ready</span>
+		</div>
+	</section>
+
+	<hr class="section-divider" />
+
+	<section id="competencies" class="grid-section">
+		<div class="section-heading">
+			<h2>Core Competencies</h2>
+			<p>High-performance engineering built for federal modernization initiatives.</p>
+		</div>
+		<div class="cards-grid">
+			<div class="card">
+				<h3>Logistical AI & ML Prediction</h3>
+				<p>Development of custom, edge-ready predictive machine learning algorithms optimizing complex asset allocation, supply chain workflows, and predictive maintenance schedules for tactical defense frameworks.</p>
+			</div>
+			<div class="card">
+				<h3>Enterprise Data Analytics</h3>
+				<p>Architecting secure, compliant real-time data streaming pipelines, schema generation (OpenAPI/Swagger), and data ingestion systems handling disparate government data structures.</p>
+			</div>
+			<div class="card">
+				<h3>Bespoke Software Development</h3>
+				<p>Full-stack, serverless software engineering operating native edge routing. Built on rigid modern frameworks to maintain zero client-side vulnerability surfaces (OPSEC compliant).</p>
+			</div>
+		</div>
+	</section>
+
+	<hr class="section-divider" />
+
+	<section id="corporate-data" class="data-section">
+		<div class="section-heading">
+			<h2>Corporate Data</h2>
+			<p>Direct indexing parameters for immediate procurement verification.</p>
+		</div>
+		
+		<div class="data-table-container">
+			<table class="data-table">
+				<tbody>
+					<tr>
+						<td><strong>Legal Business Name:</strong></td>
+						<td>Arkbridge Systems LLC</td>
+					</tr>
+					<tr>
+						<td><strong>Unique Entity ID (UEI):</strong></td>
+						<td class="monospaced">[PENDING / ASSIGNED BY SAM.GOV]</td>
+					</tr>
+					<tr>
+						<td><strong>CAGE Code:</strong></td>
+						<td class="monospaced">[PENDING APPLICATION]</td>
+					</tr>
+					<tr>
+						<td><strong>Socioeconomic Status:</strong></td>
+						<td>Uncategorized Small Business</td>
+					</tr>
+					<tr>
+						<td><strong>Place of Performance:</strong></td>
+						<td>[State Headquarters Selected] / Nationwide Remote Capable</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="naics-box">
+				<h3>Registered NAICS Codes</h3>
+				<ul>
+					<li><strong>541511</strong> &mdash; Custom Computer Programming Services (Primary)</li>
+					<li><strong>541512</strong> &mdash; Computer Systems Design Services</li>
+					<li><strong>541519</strong> &mdash; Other Computer Related Services</li>
+					<li><strong>541715</strong> &mdash; Research and Development in the Physical, Engineering, and Life Sciences</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<hr class="section-divider" />
+
+	<section id="differentiators" class="grid-section">
+		<div class="section-heading">
+			<h2>Differentiators</h2>
+			<p>Why federal entities and prime integration partners select our technical capabilities.</p>
+		</div>
+		<div class="diff-container">
+			<div class="diff-item">
+				<h4>Ex-FAANG Architecture Standards</h4>
+				<p>Our engineering leads bring elite, industry-vetted backgrounds from hyper-scale technology companies, introducing massive code efficiency, robust automated testing, and scalable performance metrics rarely found in legacy contracting pools.</p>
+			</div>
+			<div class="diff-item">
+				<h4>Agile Edge Infrastructure</h4>
+				<p>By leveraging serverless edge-computing ecosystems, we deploy high-velocity microservices capable of processing intense predictive ML modeling pipelines with minimal infrastructure overhead, keeping project costs radically optimized.</p>
+			</div>
+		</div>
+	</section>
+
+	<hr class="section-divider" />
+
+	<section id="contact" class="contact-section">
+		<h2>Capture Management & RFI Intake</h2>
+		<p>For teaming agreements, sub-contracting requests, or RFI inquiries, contact our core management team directly.</p>
+		<div class="contact-card">
+			<p><strong>Email:</strong> secure-inbox@your-cloudflare-domain.com</p>
+			<p><strong>Corporate Address:</strong> [Your Verified Physical Office or Headquarters Address]</p>
+		</div>
+	</section>
+
+</Layout>
+
+<style>
+	.hero {
+		padding: 4rem 0;
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	h1 {
+		font-size: 2.75rem;
+		font-weight: 800;
+		line-height: 1.2;
+		color: var(--navy-primary);
+		margin-bottom: 1.5rem;
+	}
+
+	.subtitle {
+		font-size: 1.2rem;
+		color: var(--text-main);
+		margin-bottom: 2rem;
+	}
+
+	.badge-row {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.badge {
+		background-color: #e2e8f0;
+		color: var(--navy-light);
+		padding: 0.35rem 0.85rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		border: 1px solid var(--border-color);
+	}
+
+	.section-divider {
+		border: 0;
+		height: 1px;
+		background: var(--border-color);
+		margin: 4rem 0;
+	}
+
+	.section-heading {
+		margin-bottom: 2.5rem;
+	}
+
+	.section-heading h2 {
+		font-size: 2rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+
+	.section-heading p {
+		color: var(--text-main);
+	}
+
+	.cards-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.card {
+		border: 1px solid var(--border-color);
+		padding: 2rem;
+		border-radius: 6px;
+		background-color: #fafafa;
+		border-top: 4px solid var(--accent-blue);
+	}
+
+	.card h3 {
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.data-section-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.data-table-container {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.data-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.data-table td {
+		padding: 0.75rem 0;
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.monospaced {
+		font-family: monospace;
+		font-size: 1rem;
+		color: var(--accent-blue);
+	}
+
+	.naics-box {
+		background-color: var(--navy-primary);
+		color: #ffffff;
+		padding: 2rem;
+		border-radius: 6px;
+	}
+
+	.naics-box h3 {
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+		border-bottom: 1px solid var(--navy-light);
+		padding-bottom: 0.5rem;
+	}
+
+	.naics-box ul {
+		list-style-type: none;
+	}
+
+	.naics-box li {
+		margin-bottom: 0.75rem;
+		font-size: 0.9rem;
+	}
+
+	.diff-container {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.diff-item h4 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		color: var(--accent-blue);
+	}
+
+	.contact-section {
+		text-align: center;
+		background-color: #f8fafc;
+		padding: 3rem;
+		border-radius: 6px;
+		border: 1px dashed var(--border-color);
+	}
+
+	.contact-section h2 {
+		margin-bottom: 1rem;
+	}
+
+	.contact-card {
+		margin-top: 1.5rem;
+		font-size: 1.1rem;
+	}
+
+	@media (max-width: 900px) {
+		.data-table-container {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+</style>
