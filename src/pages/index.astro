@@ -330,14 +330,89 @@ import Layout from '../layouts/Layout.astro';
 		line-height: 1.5;
 	}
 
-	@media (max-width: 550px) {
-		.metadata-item {
-			grid-template-columns: 1fr;
-			gap: 0.25rem;
-		}
-		.metadata-item:last-child {
-			align-items: start;
-		}
+	/* ==========================================================================
+   ARKBRIDGE MOBILE RESPONSIVE OPTIMIZATION PATH
+   ========================================================================== */
+  @media (max-width: 768px) {
+	/* 1. Fix Header, Footer & Global Body Viewport Containers */
+	body, html {
+		overflow-x: hidden; /* Hard prevents any element from breaking the screen width */
 	}
+
+	/* Fix Hero whitespace layout collapse */
+	.hero {
+		padding: 2rem 1rem 1rem 1rem; /* Brings title closer to the nav header */
+	}
+
+	h1 {
+		font-size: 2rem; /* Keeps giant headings readable on mobile screens */
+	}
+
+	/* 2. Corporate Data Table Mobile Stacking Rules */
+	.data-table-container {
+		grid-template-columns: 1fr !important; /* Force NAICS box to drop cleanly below */
+		gap: 2rem;
+	}
+
+	.data-table, .data-table tbody, .data-table tr, .data-table td {
+		display: block; /* Breaks standard table layout into a vertical stack */
+		width: 100%;
+	}
+
+	.data-table tr {
+		margin-bottom: 1rem;
+		border-bottom: 1px solid var(--border-color);
+		padding-bottom: 0.5rem;
+	}
+
+	.data-table td {
+		border-bottom: none;
+		padding: 0.25rem 0;
+	}
+
+	.data-table td:first-child {
+		font-weight: 700;
+		color: #0f172a; /* Gives prominent visual hierarchy to the label */
+	}
+
+	/* 3. Capture Management & RFI Intake Structural Guardrails */
+	.contact-section {
+		padding: 2rem 1rem;
+	}
+
+	.metadata-grid {
+		max-width: 100%;
+		padding: 1.25rem;
+	}
+
+	.metadata-item {
+		grid-template-columns: 1fr !important; /* Changes from 2-column side-by-side to stacked */
+		gap: 0.25rem;
+		align-items: start !important;
+	}
+
+	.metadata-value {
+		overflow-wrap: anywhere; /* Forces unbroken email strings to map safely to container bounds */
+		word-break: break-all;
+		font-size: 0.85rem; /* Scales long addresses nicely for tiny displays */
+	}
+}
+
+  /* Specific adjustment if your global nav layout is embedded in this file */
+  @media (max-width: 600px) {
+	.nav-content {
+		flex-direction: column;
+		gap: 1rem;
+		text-align: center;
+		padding: 1rem;
+	}
+	
+	/* Gives nav text sections appropriate tracking room */
+	.nav-links {
+		gap: 0.75rem; 
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
 
 </style>
