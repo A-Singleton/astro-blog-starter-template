@@ -61,12 +61,12 @@ import Layout from '../layouts/Layout.astro';
 						<td class="monospaced">[PENDING APPLICATION]</td>
 					</tr>
 					<tr>
-						<td><strong>Socioeconomic Status:</strong></td>
-						<td>Uncategorized Small Business</td>
+						<td><strong>Socioeconomic Indicator:</strong></td>
+						<td>Total Small Business Concerns</td>
 					</tr>
 					<tr>
 						<td><strong>Place of Performance:</strong></td>
-						<td>[State Headquarters Selected] / Nationwide Remote Capable</td>
+						<td>Florida / Nationwide Remote Capable</td>
 					</tr>
 				</tbody>
 			</table>
@@ -93,7 +93,7 @@ import Layout from '../layouts/Layout.astro';
 		<div class="diff-container">
 			<div class="diff-item">
 				<h4>Ex-FAANG Architecture Standards</h4>
-				<p>Our engineering leads bring elite, industry-vetted backgrounds from hyper-scale technology companies, introducing massive code efficiency, robust automated testing, and scalable performance metrics rarely found in legacy contracting pools.</p>
+				<p>Our founding engineering leadership brings a track record of elite, industry-vetted backgrounds from hyper-scale technology companies, introducing massive code efficiency, robust automated testing, and scalable performance metrics rarely found in legacy contracting pools.</p>
 			</div>
 			<div class="diff-item">
 				<h4>Agile Edge Infrastructure</h4>
@@ -107,9 +107,19 @@ import Layout from '../layouts/Layout.astro';
 	<section id="contact" class="contact-section">
 		<h2>Capture Management & RFI Intake</h2>
 		<p>For teaming agreements, sub-contracting requests, or RFI inquiries, contact our core management team directly.</p>
-		<div class="contact-card">
-			<p><strong>Email:</strong> secure-inbox@your-cloudflare-domain.com</p>
-			<p><strong>Corporate Address:</strong> [Your Verified Physical Office or Headquarters Address]</p>
+		<div class="metadata-grid">
+			<div class="metadata-item">
+				<span class="metadata-label">Corporate Address:</span>
+				<span class="metadata-value">300 East University Avenue, 1st Floor, Gainesville, FL 32601</span>
+			</div>
+			<div class="metadata-item">
+				<span class="metadata-label">Secure Contact:</span>
+				<span class="metadata-value">secure-inbox@arkbridgesystems.com</span>
+			</div>
+            <div class="metadata-item">
+			    <span class="metadata-label">SAM.gov Registry:</span>
+			    <span class="metadata-value">Pending (UEI & CAGE Processing)</span>
+			</div>
 		</div>
 	</section>
 
@@ -262,22 +272,72 @@ import Layout from '../layouts/Layout.astro';
 		background-color: #f8fafc;
 		padding: 3rem;
 		border-radius: 6px;
-		border: 1px dashed var(--border-color);
+		border: 1px solid var(--border-color);
 	}
 
 	.contact-section h2 {
 		margin-bottom: 1rem;
+		color: var(--navy-primary, #0f172a);
 	}
 
-	.contact-card {
-		margin-top: 1.5rem;
-		font-size: 1.1rem;
+	.contact-section p {
+		color: var(--text-main, #334155);
+		margin-bottom: 2rem;
 	}
 
-	@media (max-width: 900px) {
-		.data-table-container {
+	.metadata-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		text-align: left;
+		max-width: 600px;
+		margin: 0 auto;
+		background: #ffffff;
+		padding: 2rem;
+		border-radius: 8px;
+		border: 1px solid var(--border-color);
+	}
+
+	.metadata-item {
+		display: grid;
+		grid-template-columns: 160px 1fr; /* Exact uniform column width for perfect vertical tracking */
+		gap: 1rem;
+	}
+
+	/* Target address row to align to the top */
+	.metadata-item:first-child {
+		align-items: start;
+	}
+
+	/* Target email row to align perfectly along the text baseline */
+	.metadata-item:last-child {
+		align-items: baseline;
+	}
+	
+	.metadata-label {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-weight: 700;
+		font-size: 0.95rem;
+		color: #0f172a; /* Sharp contrast slate */
+		letter-spacing: -0.01em;
+	}
+	
+	.metadata-value {
+		/* Premium modern tech font stack - drops typewriter look for clean geometry */
+		font-family: 'JetBrains Mono', 'Inter', system-ui, sans-serif; 
+		color: #475569;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	@media (max-width: 550px) {
+		.metadata-item {
 			grid-template-columns: 1fr;
-			gap: 2rem;
+			gap: 0.25rem;
+		}
+		.metadata-item:last-child {
+			align-items: start;
 		}
 	}
+
 </style>
