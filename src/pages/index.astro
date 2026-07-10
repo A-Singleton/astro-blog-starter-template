@@ -108,14 +108,14 @@ import Layout from '../layouts/Layout.astro';
 		<h2>Capture Management & RFI Intake</h2>
 		<p>For teaming agreements, sub-contracting requests, or RFI inquiries, contact our core management team directly.</p>
 		<div class="metadata-grid">
-		  <div class="metadata-item">
-		    <span class="metadata-label">Corporate Address:</span>
-		    <span class="metadata-value">300 East University Avenue, 1st Floor, Gainesville, FL 32601</span>
-		  </div>
-		  <div class="metadata-item">
-		    <span class="metadata-label">Secure Contact:</span>
-		    <span class="metadata-value">secure-inbox@arkbridgesystems.com</span>
-		  </div>
+			<div class="metadata-item">
+				<span class="metadata-label">Corporate Address:</span>
+				<span class="metadata-value">300 East University Avenue, 1st Floor, Gainesville, FL 32601</span>
+			</div>
+			<div class="metadata-item">
+				<span class="metadata-label">Secure Contact:</span>
+				<span class="metadata-value">secure-inbox@arkbridgesystems.com</span>
+			</div>
 		</div>
 	</section>
 
@@ -268,34 +268,46 @@ import Layout from '../layouts/Layout.astro';
 		background-color: #f8fafc;
 		padding: 3rem;
 		border-radius: 6px;
-		border: 1px dashed var(--border-color);
+		border: 1px solid var(--border-color);
 	}
 
 	.contact-section h2 {
 		margin-bottom: 1rem;
+		color: var(--navy-primary, #0f172a);
+	}
+
+	.contact-section p {
+		color: var(--text-main, #334155);
+		margin-bottom: 2rem;
 	}
 
 	.metadata-grid {
 		display: flex;
 		flex-direction: column;
-		gap: 0.75rem; /* Perfectly uniform space between rows */
-		text-align: left; /* Enforces best-practice left alignment */
-		max-width: 600px;
+		gap: 0.75rem;
+		text-align: left;
+		max-width: 540px;
+		margin: 0 auto; /* Centers the whole block while keeping content left-aligned */
+		background: #ffffff;
+		padding: 1.5rem;
+		border-radius: 6px;
+		border: 1px solid var(--border-color);
 	}
 
 	.metadata-item {
 		display: flex;
-		flex-wrap: wrap; /* Prevents overflow clipping on mobile viewports */
-		gap: 0.5rem; /* Guarantees exactly 8px of crisp spacing after the colon */
+		flex-wrap: wrap;
+		gap: 0.5rem;
 	}
 	
 	.metadata-label {
 		font-weight: 700;
-		color: #ffffff;
+		color: #0f172a; /* Sharp contrast charcoal */
 	}
 	
 	.metadata-value {
-	    color: #94a3b8; /* Professional slate gray text color for hierarchy */
+		color: #475569; /* Clear, highly scannable contrast gray */
+		font-family: monospace; /* Great for exact routing strings and addresses */
 	}
 
 	@media (max-width: 900px) {
