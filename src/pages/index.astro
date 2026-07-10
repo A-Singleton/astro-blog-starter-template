@@ -107,9 +107,15 @@ import Layout from '../layouts/Layout.astro';
 	<section id="contact" class="contact-section">
 		<h2>Capture Management & RFI Intake</h2>
 		<p>For teaming agreements, sub-contracting requests, or RFI inquiries, contact our core management team directly.</p>
-		<div class="contact-card">
-			<p><strong>Email:</strong>secure-inbox@arkbridgesystems.com</p>
-			<p><strong>Corporate Address:</strong>300 East University Avenue, 1st Floor, Gainesville, Florida 32601</p>
+		<div class="metadata-grid">
+		  <div class="metadata-item">
+		    <span class="metadata-label">Corporate Address:</span>
+		    <span class="metadata-value">300 East University Avenue, 1st Floor, Gainesville, FL 32601</span>
+		  </div>
+		  <div class="metadata-item">
+		    <span class="metadata-label">Secure Contact:</span>
+		    <span class="metadata-value">secure-inbox@arkbridgesystems.com</span>
+		  </div>
 		</div>
 	</section>
 
@@ -269,9 +275,27 @@ import Layout from '../layouts/Layout.astro';
 		margin-bottom: 1rem;
 	}
 
-	.contact-card {
-		margin-top: 1.5rem;
-		font-size: 1.1rem;
+	.metadata-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem; /* Perfectly uniform space between rows */
+		text-align: left; /* Enforces best-practice left alignment */
+		max-width: 600px;
+	}
+
+	.metadata-item {
+		display: flex;
+		flex-wrap: wrap; /* Prevents overflow clipping on mobile viewports */
+		gap: 0.5rem; /* Guarantees exactly 8px of crisp spacing after the colon */
+	}
+	
+	.metadata-label {
+		font-weight: 700;
+		color: #ffffff;
+	}
+	
+	.metadata-value {
+	    color: #94a3b8; /* Professional slate gray text color for hierarchy */
 	}
 
 	@media (max-width: 900px) {
