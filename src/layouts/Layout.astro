@@ -16,11 +16,16 @@ const { title, description = "Federal Technology Partner specializing in Softwar
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+
+        <!-- Google Fonts Imports for JetBrains Mono -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<nav class="nav-container">
 			<div class="nav-content">
-				<a href="/" class="brand-logo">Ark<span class="text-mute">bridge</span> Systems</a>
+				<a href="/" class="brand-logo">ARKBRIDGE <span class="brand-accent">SYSTEMS</span></a>
 				<div class="nav-links">
 					<a href="#competencies">Capabilities</a>
 					<a href="#corporate-data">Corporate Data</a>
@@ -85,11 +90,17 @@ const { title, description = "Federal Technology Partner specializing in Softwar
 	}
 
 	.brand-logo {
+		font-family: 'JetBrains Mono', 'Fira Code', monospace; /* Modern engineering look */
+		font-size: 1.15rem;
+		font-weight: 700;
+		letter-spacing: 0.15em; /* Breathing room for premium branding */
+		text-transform: uppercase;
 		color: #ffffff;
-		font-weight: 800;
-		font-size: 1.25rem;
 		text-decoration: none;
-		letter-spacing: 0.05em;
+	}
+		
+	.brand-accent {
+		color: #3b82f6; /* Sharp blue (or your specific brand theme color) */
 	}
 
 	.text-mute {
