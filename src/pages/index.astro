@@ -284,41 +284,55 @@ import Layout from '../layouts/Layout.astro';
 	.metadata-grid {
 		display: flex;
 		flex-direction: column;
-		gap: 1.25rem;
+		gap: 1.5rem;
 		text-align: left;
-		max-width: 560px;
-		margin: 0 auto; /* Centers the card container */
+		max-width: 600px;
+		margin: 0 auto;
 		background: #ffffff;
-		padding: 1.75rem;
-		border-radius: 6px;
+		padding: 2rem;
+		border-radius: 8px;
 		border: 1px solid var(--border-color);
 	}
 
 	.metadata-item {
 		display: grid;
-		grid-template-columns: max-content 1fr; /* Label scales perfectly, text occupies remainder */
-		gap: 1.25rem; /* Precise horizontal window separating columns */
+		grid-template-columns: 160px 1fr; /* Exact uniform column width for perfect vertical tracking */
+		gap: 1rem;
+	}
+
+	/* Target address row to align to the top */
+	.metadata-item:first-child {
 		align-items: start;
+	}
+
+	/* Target email row to align perfectly along the text baseline */
+	.metadata-item:last-child {
+		align-items: baseline;
 	}
 	
 	.metadata-label {
+		font-family: system-ui, -apple-system, sans-serif;
 		font-weight: 700;
-		color: #0f172a; /* Authorized deep slate */
-		white-space: nowrap; /* Keeps label components cleanly grouped */
+		font-size: 0.95rem;
+		color: #0f172a; /* Sharp contrast slate */
+		letter-spacing: -0.01em;
 	}
 	
 	.metadata-value {
+		/* Premium modern tech font stack - drops typewriter look for clean geometry */
+		font-family: 'JetBrains Mono', 'Inter', system-ui, sans-serif; 
 		color: #475569;
-		font-family: monospace;
 		font-size: 0.95rem;
-		line-height: 1.4; /* Improves clean line text tracking */
+		line-height: 1.5;
 	}
 
-	/* Elegant collapse pattern for compact/mobile layouts */
-	@media (max-width: 520px) {
+	@media (max-width: 550px) {
 		.metadata-item {
 			grid-template-columns: 1fr;
 			gap: 0.25rem;
+		}
+		.metadata-item:last-child {
+			align-items: start;
 		}
 	}
 
